@@ -1,5 +1,4 @@
 name = "hono-blog"
 compatibility_date = "2024-11-17"
 compatibility_flags = [ "nodejs_compat" ]
-main = "./dist/_worker.js"
-assets = { directory = "./dist/static" }
+assets = { directory = "./dist" }
