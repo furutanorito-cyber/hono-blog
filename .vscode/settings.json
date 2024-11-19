@@ -25,5 +25,6 @@
 	"[typescript]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-	"editor.tabSize": 2
+	"editor.tabSize": 2,
+	"typescript.validate.enable": false
 }

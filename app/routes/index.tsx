@@ -5,7 +5,7 @@ export default createRoute((c) => {
 	const name = c.req.query("name") ?? "Hono!";
 	return c.render(
 		<div>
-			<h1 class={"text-blue-500"}>@@Hello, {name}!</h1>
+			<h1 class={"text-blue-500"}>Hello@@, {name}!</h1>
 			<Counter />
 		</div>,
 		{ title: name },
