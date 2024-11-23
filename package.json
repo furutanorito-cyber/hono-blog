@@ -1,27 +1,33 @@
 {
-  "name": "basic",
-  "type": "module",
-  "scripts": {
-    "dev": "vite --host",
-    "build": "vite build --mode client && vite build",
-    "preview": "wrangler pages dev",
-    "deploy": "$npm_execpath run build && wrangler pages deploy"
-  },
-  "private": true,
-  "dependencies": {
-    "hono": "^4.6.10",
-    "honox": "^0.1.26"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@cloudflare/workers-types": "^4.20240529.0",
-    "@hono/vite-build": "^1.0.0",
-    "@hono/vite-dev-server": "^0.16.0",
-    "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.14",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.15",
-    "vite": "^5.2.12",
-    "wrangler": "^3.57.2"
-  }
+	"name": "basic",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --host",
+		"build": "vite build --mode client && vite build",
+		"generate": "drizzle-kit generate",
+		"migrate": "drizzle-kit migrate"
+	},
+	"private": true,
+	"dependencies": {
+		"@hono/zod-validator": "^0.4.1",
+		"drizzle-orm": "^0.36.3",
+		"drizzle-zod": "^0.5.1",
+		"hono": "^4.6.10",
+		"honox": "^0.1.26",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@cloudflare/workers-types": "^4.20240529.0",
+		"@hono/vite-build": "^1.0.0",
+		"@hono/vite-dev-server": "^0.16.0",
+		"autoprefixer": "^10.4.20",
+		"daisyui": "^4.12.14",
+		"dotenv": "^16.4.5",
+		"drizzle-kit": "^0.28.1",
+		"postcss": "^8.4.49",
+		"tailwindcss": "^3.4.15",
+		"vite": "^5.2.12",
+		"wrangler": "^3.57.2"
+	}
 }

@@ -1,7 +1,8 @@
 import { createRoute } from "honox/factory";
 import Counter from "../islands/counter";
+import type { Context } from "hono";
 
-export default createRoute((c) => {
+export default createRoute((c: Context) => {
 	const name = c.req.query("name") ?? "Hono!";
 	return c.render(
 		<div>
@@ -11,3 +12,9 @@ export default createRoute((c) => {
 		{ title: name },
 	);
 });
+
+/* 
+
+MDXを導入する
+
+ */

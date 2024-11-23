@@ -130,6 +130,9 @@
 				"noGlobalIsFinite": "error",
 				"noGlobalIsNan": "error",
 				"useIsArray": "error"
+			},
+			"nursery": {
+				"useSortedClasses": "error"
 			}
 		}
 	},

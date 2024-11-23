@@ -14,7 +14,10 @@
 		".vscode",
 		".vscode-insiders",
 
-		"package.json"
+		"package.json",
+		".env",
+		"migrations",
+		"biome.json"
 	],
 	"cSpell.words": ["hono", "honox", "waku"],
 	"[json]": {
