@@ -8,7 +8,7 @@ type Head = {
 declare module "hono" {
 	interface Env {
 		Variables: {
-			DB: DrizzleD1Database;
+			db: DrizzleD1Database;
 		};
 		Bindings: {
 			DB: D1Database;

@@ -22,7 +22,7 @@ type Props = {
 
 const Page: FC<Props> = ({ data }) => {
 	return (
-		<div class={"m-auto max-w-screen-md"}>
+		<>
 			<h1 class={"mb-4 text-2xl"}>記事を作成する</h1>
 			<form method="post" class={"flex flex-col gap-8"}>
 				<label>
@@ -62,7 +62,7 @@ const Page: FC<Props> = ({ data }) => {
 					作成
 				</button>
 			</form>
-		</div>
+		</>
 	);
 };
 
@@ -87,7 +87,6 @@ export const POST = createRoute(
 				content: validationResult.data.content,
 			});
 
-			console.log(validationResult.data);
 			return context.redirect("/articles");
 		}
 
@@ -102,11 +101,6 @@ export const POST = createRoute(
 				error: validationResult.error.flatten().fieldErrors.content,
 			},
 		};
-
-		console.log("バリデーションエラー");
-
-		console.log(data.title.value);
-		console.log(data.content.value);
 
 		return context.render(<Page data={data} />, {
 			title: "記事の投稿",

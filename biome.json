@@ -73,7 +73,8 @@
 				"useIsNan": "error",
 				"useValidForDirection": "error",
 				"useHookAtTopLevel": "error",
-				"useExhaustiveDependencies": "warn"
+				"useExhaustiveDependencies": "warn",
+				"noUnusedImports": "warn"
 			},
 			"performance": {
 				"noDelete": "error"

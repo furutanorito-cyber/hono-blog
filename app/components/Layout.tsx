@@ -31,7 +31,7 @@ export const Layout: FC = ({ children }) => {
 					</ul>
 				</nav>
 			</header>
-			<main>{children}</main>
+			<main class={"m-auto max-w-screen-md"}>{children}</main>
 		</>
 	);
 };
