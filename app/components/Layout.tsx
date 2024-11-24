@@ -2,8 +2,8 @@ import type { FC } from "hono/jsx";
 import { useRequestContext } from "hono/jsx-renderer";
 
 const links = [
-	{ href: "/articles", text: "Articles" },
-	{ href: "/articles/create", text: "Create" },
+	{ href: "/articles", text: "一覧" },
+	{ href: "/articles/create", text: "作成" },
 ];
 
 export const Layout: FC = ({ children }) => {
