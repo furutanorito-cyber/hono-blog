@@ -2,7 +2,6 @@ import type { FC } from "hono/jsx";
 import { createRoute } from "honox/factory";
 import { z } from "zod";
 import { zValidator } from "@hono/zod-validator";
-import { drizzle } from "drizzle-orm/d1";
 import { articles } from "../../schema/articles";
 
 type Data = {
@@ -80,9 +79,7 @@ const Article = z.object({
 export const POST = createRoute(
 	zValidator("form", Article, async (validationResult, context) => {
 		if (validationResult.success) {
-			// ToDoDBに保存する
-			const db = drizzle(context.env.DB);
-			await db.insert(articles).values({
+			await context.var.db.insert(articles).values({
 				title: validationResult.data.title,
 				content: validationResult.data.content,
 			});
