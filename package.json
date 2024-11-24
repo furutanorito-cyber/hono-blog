@@ -5,7 +5,9 @@
 		"dev": "vite --host",
 		"build": "vite build --mode client && vite build",
 		"generate": "drizzle-kit generate",
-		"migrate": "drizzle-kit migrate"
+		"migrate": "drizzle-kit migrate",
+		"db:studio": "cross-env LOCAL_DB_PATH=$(find .wrangler/state/v3/d1/miniflare-D1DatabaseObject -type f -name '*.sqlite' -print -quit) drizzle-kit studio",
+		"db:studio:prod": "drizzle-kit studio"
 	},
 	"private": true,
 	"dependencies": {
@@ -22,6 +24,8 @@
 		"@hono/vite-build": "^1.0.0",
 		"@hono/vite-dev-server": "^0.16.0",
 		"autoprefixer": "^10.4.20",
+		"better-sqlite3": "^11.5.0",
+		"cross-env": "^7.0.3",
 		"daisyui": "^4.12.14",
 		"dotenv": "^16.4.5",
 		"drizzle-kit": "^0.28.1",
